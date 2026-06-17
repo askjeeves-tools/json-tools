@@ -1,12 +1,12 @@
 import { unlink, writeFile } from "node:fs/promises";
 import { join } from "node:path";
-import { fixturePath } from "@askjeeves/test-e2e/fixtures";
+import { test } from "@playwright/test";
 import {
 	expectConvertPanelVisible,
 	expectToolStatusError,
+	fixturePath,
 	uploadFixture,
-} from "@askjeeves/test-e2e/tool-flow";
-import { test } from "@playwright/test";
+} from "./helpers";
 
 test("wrong format upload shows error", async ({ page }) => {
 	await page.goto("/");
@@ -41,5 +41,19 @@ test("object json shows conversion error on convert", async ({ page }) => {
 		await expectToolStatusError(page, /array of objects/i);
 	} finally {
 		await unlink(objectPath).catch(() => {});
+	}
+});
+
+test("oversize upload shows error", async ({ page }) => {
+	const bigPath = join(fixturePath(".."), "oversize.json");
+	const big = Buffer.alloc(52_428_801, 0x7b);
+
+	try {
+		await writeFile(bigPath, big);
+		await page.goto("/");
+		await page.locator("#tool-file-input").setInputFiles(bigPath);
+		await expectToolStatusError(page, /too large/i);
+	} finally {
+		await unlink(bigPath).catch(() => {});
 	}
 });

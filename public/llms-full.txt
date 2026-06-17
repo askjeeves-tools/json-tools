@@ -1,0 +1,54 @@
+# Free Secure JSON Converter — Ask Jeeves
+
+> Free, secure JSON converter. Convert JSON to CSV in your browser—files never leave your device. No account, no upload, no watermarks.
+
+## Tool
+
+- [Free Secure JSON Converter](https://json.askjeeves.cc/): Convert JSON to CSV in your browser
+
+## Supported conversions
+
+- JSON → CSV
+
+## FAQ
+
+- Is this JSON converter free? Yes. Every conversion is free with no account, watermark, or usage limit.
+- Is this JSON converter secure? Yes. Files are processed locally in your browser. Nothing is uploaded to a server, so your data stays on your device.
+- What formats can I convert JSON to? You can convert JSON to CSV. The tool accepts standard JSON files including arrays of objects and nested structures.
+- Can I convert JSON arrays to CSV? Yes. An array of objects becomes a CSV with column headers from object keys. Each object becomes one row.
+- Does the converter work on mobile? Yes. It runs in modern mobile browsers that support HTML5 and JavaScript. Very large files may be slower on mobile devices.
+- What is the maximum file size? Each file can be up to about 50 MB. If a file is too large, you will see a clear error message asking you to use a smaller file.
+- Why did my conversion fail? Common causes are invalid JSON syntax, an empty file, exceeding the size limit, or JSON that cannot be represented as tabular CSV. Check the message below the converter for specific guidance, then try again or refresh the page.
+
+## Extended context
+
+- [Full site context](https://json.askjeeves.cc/llms-full.txt): how-it-works, security, and per-conversion details
+
+## More tools
+
+- [Ask Jeeves](https://askjeeves.cc): Free file conversion tools (PDF, images, CSV/JSON/Excel, Word)
+
+## How it works
+
+1. Upload a JSON file using the drop zone or file picker.
+2. Choose JSON → CSV as your output format.
+3. Click Convert, then download your CSV file. Nothing is uploaded to a server.
+
+## Secure and private
+
+Your files are processed locally in your browser. Nothing is stored on a server and nothing is uploaded over the network. That makes this tool a good fit for API responses, configuration files, and other sensitive data you do not want to send to a third-party service.
+
+## Conversion details
+
+- **JSON → CSV** — Convert JSON arrays or objects to CSV. Nested objects are flattened; arrays of objects become spreadsheet rows with column headers.
+
+## Keywords
+
+json converter, free json converter, secure json converter, json to csv, json csv converter, browser json converter, convert json to csv, json file converter
+
+## Site metadata
+
+- Canonical URL: https://json.askjeeves.cc/
+- Site name: Free Secure JSON Converter — Ask Jeeves
+- Sitemap: https://json.askjeeves.cc/sitemap-index.xml
+- Organization: [Ask Jeeves](https://askjeeves.cc)

@@ -1,9 +1,10 @@
 import { createToolConfig } from "@askjeeves/conversion-core";
+import { SEO_BRAND_TITLE, SEO_DESCRIPTION } from "./src/seo";
 
 export const toolConfig = createToolConfig({
 	id: "json-tools",
-	title: "JSON Converter",
-	tagline: "Convert JSON files in your browser. Nothing leaves your device.",
+	title: SEO_BRAND_TITLE,
+	tagline: SEO_DESCRIPTION,
 	sourceFormat: "json",
 	allowsMultiple: false,
 	minFiles: 1,

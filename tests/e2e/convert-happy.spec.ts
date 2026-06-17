@@ -1,12 +1,9 @@
-import { TOOL_MATRIX } from "@askjeeves/test-e2e/conversion-matrix";
-import { runToolMatrixCase } from "@askjeeves/test-e2e/tool-flow";
 import { test } from "@playwright/test";
+import { JSON_CONVERSION_CASES, runJsonConversionCase } from "./helpers";
 
-const cases = TOOL_MATRIX["json-tools"] ?? [];
-
-for (const testCase of cases) {
+for (const testCase of JSON_CONVERSION_CASES) {
 	test(`converts ${testCase.id}`, async ({ page }) => {
 		await page.goto("/");
-		await runToolMatrixCase(page, testCase);
+		await runJsonConversionCase(page, testCase);
 	});
 }

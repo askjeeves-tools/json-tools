@@ -1,10 +1,9 @@
-import { fixturePath } from "@askjeeves/test-e2e/fixtures";
+import { test } from "@playwright/test";
 import {
 	expectConvertPanelVisible,
 	expectToolStatusError,
-	uploadFixture,
-} from "@askjeeves/test-e2e/tool-flow";
-import { test } from "@playwright/test";
+	fixturePath,
+} from "./helpers";
 
 test("invalid JSON content shows error at upload", async ({ page }) => {
 	await page.goto("/");
